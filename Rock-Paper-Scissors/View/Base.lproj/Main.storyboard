@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Rock_Paper_Scissors" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="actual_rock" translatesAutoresizingMaskIntoConstraints="NO" id="Y4W-Sj-9Ki">
+                                <rect key="frame" x="87" y="137" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="OaS-yw-GHv" appends="YES" id="gan-dP-S2A"/>
+                                </connections>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="actual_paper" translatesAutoresizingMaskIntoConstraints="NO" id="tMZ-CZ-t9v">
+                                <rect key="frame" x="87" y="293" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="hMr-xb-DDM" appends="YES" id="IAq-NW-R5z"/>
+                                </connections>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="actual_scissors" translatesAutoresizingMaskIntoConstraints="NO" id="bZ1-xM-FYv">
+                                <rect key="frame" x="87" y="447" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="q4M-FX-Fu4" appends="YES" id="o9k-kw-6X8"/>
+                                </connections>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xca-yl-KFs">
+                                <rect key="frame" x="183" y="766" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jEU-VW-s2V">
+                                <rect key="frame" x="185" y="672" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="paperImage" destination="tMZ-CZ-t9v" id="jPy-Lh-wfD"/>
+                        <outlet property="rockImage" destination="Y4W-Sj-9Ki" id="sRH-xl-9x2"/>
+                        <outlet property="scissorsImage" destination="bZ1-xM-FYv" id="2yq-cc-v9b"/>
+                        <segue destination="seR-Ca-UJP" kind="show" identifier="toResultsPage" id="E28-BB-iHO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="OaS-yw-GHv">
+                    <connections>
+                        <action selector="tappedRock:" destination="BYZ-38-t0r" id="YFP-CP-5cL"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="hMr-xb-DDM">
+                    <connections>
+                        <action selector="tappedPaper:" destination="BYZ-38-t0r" id="ejI-ud-lxW"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="q4M-FX-Fu4">
+                    <connections>
+                        <action selector="tappedScissors:" destination="BYZ-38-t0r" id="KUM-Zf-GFk"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="132" y="118"/>
+        </scene>
+        <!--Results-->
+        <scene sceneID="hjM-fC-aQr">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Results" id="seR-Ca-UJP" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="n1u-fY-0bQ"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gbG-KN-Uhb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="749" y="118"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="actual_paper" width="256" height="256"/>
+        <image name="actual_rock" width="225" height="225"/>
+        <image name="actual_scissors" width="256" height="256"/>
+    </resources>
+</document>
