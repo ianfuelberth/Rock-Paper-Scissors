@@ -67,7 +67,6 @@
 				D48D382424B528EE0006ABBB /* Controller */,
 				D48D382324B528E00006ABBB /* View */,
 				D48D381524B5271E0006ABBB /* Assets.xcassets */,
-				D48D381724B5271E0006ABBB /* LaunchScreen.storyboard */,
 				D48D381A24B5271E0006ABBB /* Info.plist */,
 				D48D381224B527170006ABBB /* Rock_Paper_Scissors.xcdatamodeld */,
 			);
@@ -79,6 +78,7 @@
 			children = (
 				D48D380F24B527170006ABBB /* Main.storyboard */,
 				D48D382024B527850006ABBB /* Results.storyboard */,
+				D48D381724B5271E0006ABBB /* LaunchScreen.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
