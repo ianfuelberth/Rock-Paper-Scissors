@@ -15,31 +15,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="FC1-uM-bbu">
-                                <rect key="frame" x="67.5" y="108.00000000000006" width="256" height="757.33333333333337"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="249" verticalCompressionResistancePriority="249" axis="vertical" distribution="fillProportionally" alignment="center" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="FC1-uM-bbu">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose one!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jEU-VW-s2V">
-                                        <rect key="frame" x="79.666666666666657" y="0.0" width="96.666666666666657" height="20.333333333333332"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="133.33333333333337" y="0.0" width="147.66666666666663" height="32"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="actual_rock" translatesAutoresizingMaskIntoConstraints="NO" id="Y4W-Sj-9Ki">
-                                        <rect key="frame" x="15.666666666666657" y="20.333333333333343" width="225" height="225"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" image="actual_rock" translatesAutoresizingMaskIntoConstraints="NO" id="Y4W-Sj-9Ki">
+                                        <rect key="frame" x="94.666666666666686" y="33" width="225" height="239"/>
                                         <gestureRecognizers/>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="OaS-yw-GHv" appends="YES" id="gan-dP-S2A"/>
                                         </connections>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="actual_paper" translatesAutoresizingMaskIntoConstraints="NO" id="tMZ-CZ-t9v">
-                                        <rect key="frame" x="0.0" y="245.33333333333337" width="256" height="256"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" image="actual_paper" translatesAutoresizingMaskIntoConstraints="NO" id="tMZ-CZ-t9v">
+                                        <rect key="frame" x="79" y="273" width="256" height="272"/>
                                         <gestureRecognizers/>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="hMr-xb-DDM" appends="YES" id="IAq-NW-R5z"/>
                                         </connections>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="actual_scissors" translatesAutoresizingMaskIntoConstraints="NO" id="bZ1-xM-FYv">
-                                        <rect key="frame" x="0.0" y="501.33333333333326" width="256" height="256"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" image="actual_scissors" translatesAutoresizingMaskIntoConstraints="NO" id="bZ1-xM-FYv">
+                                        <rect key="frame" x="79" y="546" width="256" height="272"/>
                                         <gestureRecognizers/>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="q4M-FX-Fu4" appends="YES" id="o9k-kw-6X8"/>
@@ -49,6 +49,12 @@
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="FC1-uM-bbu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="H1d-ZH-W7h"/>
+                            <constraint firstItem="FC1-uM-bbu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Yd4-wA-Sfd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FC1-uM-bbu" secondAttribute="trailing" id="iWw-LV-NB2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="FC1-uM-bbu" secondAttribute="bottom" id="jw6-Q2-2SG"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
@@ -75,7 +81,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="132" y="118"/>
+            <point key="canvasLocation" x="131.8840579710145" y="117.85714285714285"/>
         </scene>
         <!--Results-->
         <scene sceneID="hjM-fC-aQr">
