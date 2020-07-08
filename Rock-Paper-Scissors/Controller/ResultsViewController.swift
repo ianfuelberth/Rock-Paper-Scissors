@@ -17,10 +17,6 @@ class ResultsViewController: UIViewController {
     var userChoice: String = ""
     var compChoice: String = ""
     
-    @IBAction func tryAgainButton(_ sender: UIButton) {
-        // return user to main.storyboard ??
-    }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
