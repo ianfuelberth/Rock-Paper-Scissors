@@ -17,10 +17,6 @@ class ResultsViewController: UIViewController {
     var userChoice: String = ""
     var compChoice: String = ""
     
-    @IBAction func tryAgainButton(_ sender: UIButton) {
-        // return user to main.storyboard ??
-    }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,13 +28,42 @@ class ResultsViewController: UIViewController {
         Display text (done)
         Try again button connection --> brings you back to first storyboard
         */
-               
+            
+        // read choice into images .. if compChoice = rock then image = rockImage
+        
+        //Set images for compChoice and userChoice
+        
+        if userChoice == "rock"
+        {
+            userChoiceImage.image = #imageLiteral(resourceName: "actual_rock")
+        }
+        else if userChoice == "scissors"
+        {
+            userChoiceImage.image = #imageLiteral(resourceName: "actual_scissors")
+        }
+        else        //else they choose paper
+        {
+            userChoiceImage.image = #imageLiteral(resourceName: "actual_paper")
+        }
+        
+        if compChoice == "rock"
+        {
+            compChoiceImage.image = #imageLiteral(resourceName: "actual_rock")
+        }
+        else if compChoice == "scissors"
+        {
+            compChoiceImage.image = #imageLiteral(resourceName: "actual_scissors")
+        }
+        else        //else they choose paper
+        {
+            compChoiceImage.image = #imageLiteral(resourceName: "actual_paper")
+        }
+        
+        
+        // Code that generates what text to display
         
         var response = ""
-              
         
-              
-        // Code that generates what text to display
         if userChoice == "rock" && compChoice == "scissors"
         {
             response = "You won :) \(userChoice) is superior"
@@ -71,5 +96,9 @@ class ResultsViewController: UIViewController {
         {
             print("Cannot load if win or loss")
         }
+        
+        responseStatement.text = response
+        
+        
     }
 }
