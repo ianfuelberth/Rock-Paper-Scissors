@@ -36,6 +36,7 @@ class ResultsViewController: UIViewController {
         if userChoice == "rock"
         {
             userChoiceImage.image = #imageLiteral(resourceName: "actual_rock")
+            print("rock")
         }
         else if userChoice == "scissors"
         {
